@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BFI Finance 2</title>
+    <!-- SEO Meta Tags-->
+    <meta
+      name="description"
+      content="Around - Multipurpose Bootstrap Template"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
+    />
+    <meta name="author" content="Createx Studio" />
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+    <meta name="msapplication-TileColor" content="#766df4" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Page loading styles-->
+
+    <link rel="icon" href="images/logo-bfi.png" />
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+    <!-- Vendor Styles-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/simplebar/dist/simplebar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/tiny-slider/dist/tiny-slider.css"
+    />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css" />
+
+    <style type="text/css" id="jarallax-clip-0">
+      #jarallax-container-0 {
+        clip: rect(0 855px 615.09375px 0);
+        clip: rect(0, 855px, 615.09375px, 0);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    </style>
+    <style type="text/css" id="jarallax-clip-1">
+      #jarallax-container-1 {
+        clip: rect(0 855px 683.6875px 0);
+        clip: rect(0, 855px, 683.6875px, 0);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    </style>
+
+    <style>
+      .hero {
+        background-image: url(images/hero-section-background.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .cta {
+        background-image: url(images/background-cta.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="header bg-info navbar navbar-expand-lg navbar-light navbar-floating navbar-sticky navbar-stuck"
+      data-scroll-header=""
+      data-fixed-element=""
+    >
+      <div class="container px-0 px-xl-3">
+        <button
+          class="navbar-toggler ms-n2 me-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#primaryMenu"
+        >
+          <span class="navbar-toggler-icon"></span></button
+        ><a
+          class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4"
+          href=""
+          ><img
+            class="d-none d-lg-block"
+            src="images/logo-bfi.png"
+            alt="Logo BFI"
+            width="80" /><img
+            class="d-lg-none"
+            src="images/logo-bfi.png"
+            alt="Logo BFI"
+            width="58"
+        /></a>
+
+        <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+          <div class="offcanvas-header navbar-shadow">
+            <h5 class="mt-1 mb-0">Menu</h5>
+            <button
+              class="btn-close lead"
+              type="button"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container-fluid hero p-5 pt-5 pt-lg-6">
+      <div class="row align-items-center border-bottom py-5">
+        <div class="col text-light">
+          <h1 class="mb-4 text-light display-4">
+            Butuh dana tunai Untuk <br />
+            <span class="text-warning">Renovasi Rumah?</span>
+          </h1>
+
+          <div>
+            <h3 class="text-light">BFI Finance siap membantu Anda</h3>
+            <ul>
+              <li>Pengajuan cepat disetujui</li>
+              <li>Tenor Panjang sampai 48 bulan</li>
+            </ul>
+          </div>
+          <div class="row align-items-center my-4">
+            <div class="col">
+              <a href=""
+                ><button class="btn btn-lg btn-warning">
+                  Ajukan Sekarang
+                </button></a
+              >
+            </div>
+            <div class="col fw-bold">Hitung Simulasi</div>
+          </div>
+          <p class="">
+            BFI Finance berizin dan diawasi oleh Otoritas Jasa Keuangan
+          </p>
+        </div>
+        <div class="col-md-6 py-3">
+          <img
+            class="d-block mx-auto"
+            src="images/hero.png"
+            alt="Responsive Web Design"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="p-5 bg-faded-info">
+      <div class="container row align-items-center">
+        <div class="col-6">
+          <h3>
+            BFI Finance adalah Perusahaan Pembiayaan Tepercaya di Indonesia
+          </h3>
+        </div>
+        <div class="col">
+          <h4>Sejak 1982</h4>
+          41 tahun hadir dan melayani kebutuhan keuangan masyarakat
+        </div>
+        <div class="col">
+          <h4>2.000.000+</h4>
+
+          Orang telah memilih BFI Finance sebagai mitra keuangannya
+        </div>
+        <div class="col">
+          <h4>200 Cabang</h4>
+          Pelayanan yang tersebar hampir seluruh Indonesia
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION PROMO -->
+    <section class="container p-5">
+      <h1 class="my-4">Promo Spesial dan Informasi Bulan Ini</h1>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="images/promo1.webp"
+              class="d-block w-100 rounded"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="images/promo2.webp"
+              class="d-block w-100 rounded"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/promo3.webp"
+              class="d-block w-100 rounded"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- KENAPA HARUS BFI -->
+
+    <section class="p-5 text-center">
+      <h1>Kenapa Harus di BFI Finance?</h1>
+      <h4 class="fw-medium">
+        BFI Finance siap memenuhi kebutuhan keuangan Anda
+      </h4>
+
+      <div class="row">
+        <div class="col border p-4 m-lg-3 rounded">
+          <img src="images/icon-uvp1.svg" alt="" />
+          <h4>Cair Tanpa Potongan</h4>
+          <p>Dapatkan dana penuh guna memenuhi kebutuhan Anda</p>
+        </div>
+        <div class="col border p-4 m-lg-3 rounded">
+          <img src="images/icon-uvp2.svg" alt="" />
+          <h4>Bunga Rendah</h4>
+          <p>
+            Bunga mulai 0.89% per bulan, dengan suku bunga per tahun mulai
+            10.86%
+          </p>
+        </div>
+        <div class="col border p-4 m-lg-3 rounded">
+          <img src="images/icon-uvp3.svg" alt="" />
+          <h4>Dana Cair Tinggi</h4>
+          <p>
+            Pembiayaan cair mulai dari Rp10 juta hingga 80% dari nilai kendaraan
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="p-5 bg-faded-info d-flex justify-content-center">
+      <div
+        class="row cta p-5 rounded w-75 align-items-center d-flex justify-content-between"
+      >
+        <div class="col-8 text-light">
+          <h3 class="text-light">
+            Dapatkan Dana Tunai dengan Pengajuan Pinjaman Jaminan BPKB Mobil di
+            BFI Finance
+          </h3>
+          <p>Tenor panjang sampai 48 bulan</p>
+        </div>
+        <div class="col text-end">
+          <a href=""
+            ><button class="btn btn-lg bg-danger text-light">
+              Ajukan Sekarang
+            </button></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-dark pt-5 pb-4">
+      <div class="container pb-2 text-center text-md-start">
+        <div class="row pt-md-2 pb-3">
+          <div class="col-lg-3 col-md-4 pb-4">
+            <a
+              class="d-inline-block mb-3"
+              href="index.html"
+              style="width: 153px"
+              ><img src="img/logo/logo-footer-alt.png" alt="Around"
+            /></a>
+            <p class="fs-sm text-light opacity-50 mb-0">
+              Team collaboration made easy!
+            </p>
+          </div>
+          <div class="col-md-5 pt-2 pb-4">
+            <div class="widget widget-light">
+              <h4 class="widget-title mb-3">Support</h4>
+              <div class="d-lg-flex">
+                <ul class="me-lg-5">
+                  <li>
+                    <a class="widget-link" href="mailto:support@example.com"
+                      ><i class="ai-mail fs-lg me-2"></i>support@example.com</a
+                    >
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a class="widget-link" href="tel:9107848015"
+                      ><i class="ai-phone fs-lg me-2"></i>910-784-8015</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 pt-2 pb-4">
+            <div class="widget widget-light">
+              <h4 class="widget-title mb-3">Follow</h4>
+              <a
+                class="btn-social bs-outline bs-light bs-facebook bs-lg me-2 mb-2"
+                href="#"
+                ><i class="ai-facebook"></i></a
+              ><a
+                class="btn-social bs-outline bs-light bs-twitter bs-lg me-2 mb-2"
+                href="#"
+                ><i class="ai-twitter"></i></a
+              ><a
+                class="btn-social bs-outline bs-light bs-instagram bs-lg me-2 mb-2"
+                href="#"
+                ><i class="ai-instagram"></i></a
+              ><a
+                class="btn-social bs-outline bs-light bs-google bs-lg mb-2"
+                href="#"
+                ><i class="ai-google"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <p class="fs-sm text-center mb-0">
+          <span class="text-light opacity-50"
+            >© All rights reserved. Made by </span
+          ><a
+            class="nav-link-style nav-link-light"
+            href="https://createx.studio/"
+            target="_blank"
+            rel="noopener"
+            >Createx Studio</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/shufflejs/dist/shuffle.min.js"></script>
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
